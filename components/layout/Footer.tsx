@@ -17,7 +17,7 @@ export default function Footer() {
                     <div className="flex flex-col lg:flex-row justify-between gap-10">
                         <div className="flex flex-col gap-2">
                             <h2 className="text-2xl font-black text-white tracking-wider">
-                                Arta
+                                Artix
                             </h2>
                             <h1 className="text-xs md:text-base text-white font-semibold">Your Professional Ticketing Partner</h1>
                         </div>

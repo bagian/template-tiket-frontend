@@ -51,7 +51,7 @@ export default function Navbar() {
                                 <path d="M12 11h3.5V14.5" />
                             </svg>
                             <Link href="/" className="text-xl font-black tracking-wider hover:opacity-90 transition-opacity">
-                                Arta
+                                Artix
                             </Link>
                         </div>
 
