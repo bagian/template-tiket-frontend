@@ -60,7 +60,7 @@ export default function CategorySection() {
                 <p className="text-sm text-gray-500 mt-1">Cari berbagai pilihan event menarik berdasarkan kategori favoritmu</p>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-3">
                 {categories.map((cat) => {
                     const IconComponent = cat.icon;
                     return (

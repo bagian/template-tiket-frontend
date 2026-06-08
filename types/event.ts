@@ -21,18 +21,23 @@ export interface EventTicket {
     title: string;
     date: string;
     price: number;
-    imageUrl: string;
-    organizer: Organizer;
-    category?: string;
-    location?: string;
+    title_en?: string;
     description?: string;
+    description_en?: string;
     terms?: string[];
-    talents?: Talent[];
-    facilities?: string[];
+    terms_en?: string[];
+    category?: string;
+    category_en?: string;
+    location?: string;
+    location_en?: string;
+    organizer: Organizer;
+    imageUrl: string;
     bannerUrl?: string;
     time?: string;
     socials?: SocialMedia[];
     googleMapsLink?: string;
+    talents?: Talent[];
+    facilities?: string[];
 }
 
 export interface Banner {

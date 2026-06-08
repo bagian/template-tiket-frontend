@@ -5,6 +5,7 @@ export const dummyEvents: EventTicket[] = [
         id: '1',
         slug: 'rituals-nadin-amizah',
         title: 'Rituals – Nadin Amizah',
+        title_en: 'Rituals – Nadin Amizah',
         date: '26 Juni 2026',
         price: 125000,
         imageUrl: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
@@ -240,6 +241,161 @@ export const dummyEvents: EventTicket[] = [
         googleMapsLink: 'https://maps.google.com/?q=Tebing+Breksi+Yogyakarta',
         socials: [
             { platform: 'instagram', username: 'songlistfest', link: 'https://instagram.com/songlistfest' }
+        ]
+    },
+    {
+        id: 'p1',
+        slug: 'fia-rallycross-world-cup-indonesia-2026',
+        title: 'FIA Rallycross World Cup Indonesia 2026',
+        date: '15 Desember 2026',
+        price: 150000,
+        imageUrl: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+        organizer: {
+            name: 'FIA Indonesia',
+            logo: 'https://ui-avatars.com/api/?name=FIA&background=f3f4f6&color=1e3a8a',
+        },
+        category: 'Olahraga',
+        location: 'Jakarta Utara',
+        description: 'Kejuaraan dunia balap mobil reli silang (Rallycross) resmi di bawah naungan FIA kini hadir pertama kalinya di Indonesia. Saksikan pertarungan sengit pembalap kelas dunia di trek tanah dan aspal khusus di Jakarta Utara!',
+        terms: [
+            'Tiket berlaku sesuai tanggal yang tertera.',
+            'Penonton wajib mengenakan gelang pengenal selama berada di area sirkuit.',
+            'Dilarang mendekati pagar pembatas lintasan balap demi keselamatan.',
+            'Gunakan pelindung telinga (earplug) terutama untuk penonton anak-anak.'
+        ],
+        talents: [
+            {
+                name: 'Johan Kristoffersson',
+                role: 'World RX Champion',
+                imageUrl: 'https://ui-avatars.com/api/?name=Johan+K&background=dbeafe&color=1d4ed8'
+            },
+            {
+                name: 'Timmy Hansen',
+                role: 'Main Driver Team Hansen',
+                imageUrl: 'https://ui-avatars.com/api/?name=Timmy+H&background=fee2e2&color=dc2626'
+            }
+        ],
+        facilities: ['Tribun Penonton Utama', 'F&B Food Court', 'Area Parkir Luas', 'Medical Center', 'Paddock Walk Access (VIP Only)'],
+        bannerUrl: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        time: '09:00 - 18:00 WIB',
+        googleMapsLink: 'https://maps.google.com/?q=Jakarta+Utara',
+        socials: [
+            { platform: 'instagram', username: 'fiaworldrx', link: 'https://instagram.com/fiaworldrx' }
+        ]
+    },
+    {
+        id: 'p2',
+        slug: 'mommy-n-me-2026',
+        title: "Mommy n'Me 2026",
+        date: '28 Juni 2026',
+        price: 50000,
+        imageUrl: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+        organizer: {
+            name: 'Reed Panorama Exhibitions',
+            logo: 'https://ui-avatars.com/api/?name=RPE&background=fce7f3&color=db2777',
+        },
+        category: 'Pameran',
+        location: 'Jakarta Pusat',
+        description: 'Pameran festival kebutuhan ibu hamil, bayi, dan anak-anak terbesar di Indonesia. Temukan ribuan produk perlengkapan dengan diskon eksklusif dan ikuti talkshow edukatif bersama pakar kesehatan anak.',
+        terms: [
+            'Tiket masuk berlaku harian (1-Day Admission).',
+            'Anak-anak di bawah tinggi badan 100cm gratis tiket masuk.',
+            'Dilarang membawa kereta dorong (stroller) berukuran ekstra besar di jam-jam padat.',
+            'Harap menjaga kebersihan dan menggunakan tempat sampah daur ulang.'
+        ],
+        talents: [
+            {
+                name: 'dr. Meta Hanindita, Sp.A',
+                role: 'Pediatrician & Talkshow Host',
+                imageUrl: 'https://ui-avatars.com/api/?name=Meta+H&background=fce7f3&color=9d174d'
+            },
+            {
+                name: 'Tasya Kamila',
+                role: 'Mom Influencer Guest',
+                imageUrl: 'https://ui-avatars.com/api/?name=Tasya+K&background=ffedd5&color=c2410c'
+            }
+        ],
+        facilities: ['Nursery & Breastfeeding Room', 'Stroller Rental Station', 'Kids Playground Area', 'Bazaar Makanan & Minuman', 'Medical/P3K'],
+        bannerUrl: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        time: '10:00 - 21:00 WIB',
+        googleMapsLink: 'https://maps.google.com/?q=Jakarta+Pusat',
+        socials: [
+            { platform: 'instagram', username: 'mommynme.id', link: 'https://instagram.com/mommynme.id' }
+        ]
+    },
+    {
+        id: 'p3',
+        slug: 'ideafest-sub-x-youth-up',
+        title: 'IDEAFEST SUB x YOUTH UP',
+        date: '12 Oktober 2026',
+        price: 75000,
+        imageUrl: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+        organizer: {
+            name: 'IdeaFest Indonesia',
+            logo: 'https://ui-avatars.com/api/?name=IF&background=fef3c7&color=d97706',
+        },
+        category: 'Seminar',
+        location: 'Kota Surabaya',
+        description: 'Festival kreatif terbesar hadir di Surabaya berkolaborasi dengan Youth Up. Dapatkan inspirasi tanpa batas dari para pembicara industri kreatif nasional mengenai inovasi digital, seni, dan pengembangan diri generasi muda.',
+        terms: [
+            'Tiket berlaku untuk seluruh sesi conference dan workshop.',
+            'Dilarang melakukan perekaman video sesi presentasi tanpa izin tertulis panitia.',
+            'Sertifikat digital akan dikirimkan maksimal H+7 setelah acara berakhir.',
+            'Harap berpakaian sopan dan kasual.'
+        ],
+        talents: [
+            {
+                name: 'Raditya Dika',
+                role: 'Content Creator & Writer',
+                imageUrl: 'https://ui-avatars.com/api/?name=Raditya+D&background=fef3c7&color=b45309'
+            },
+            {
+                name: 'Najwa Shihab',
+                role: 'Journalist & Founder Narasi',
+                imageUrl: 'https://ui-avatars.com/api/?name=Najwa+S&background=e0f2fe&color=0369a1'
+            }
+        ],
+        facilities: ['Idea Lounge & Networking Cafe', 'Creative Booth Bazaar', 'WiFi Area Kecepatan Tinggi', 'E-Certificate Eksklusif'],
+        bannerUrl: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        time: '09:00 - 17:30 WIB',
+        googleMapsLink: 'https://maps.google.com/?q=Surabaya',
+        socials: [
+            { platform: 'instagram', username: 'ideafest', link: 'https://instagram.com/ideafest' }
+        ]
+    },
+    {
+        id: 'p4',
+        slug: 'aldi-taher-world-tour-2026',
+        title: 'ALDI TAHER - WORLD TOUR 2026 by BENGKEL HALL',
+        date: '05 September 2026',
+        price: 100000,
+        imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+        organizer: {
+            name: 'Bengkel Space',
+            logo: 'https://ui-avatars.com/api/?name=BS&background=f3e8ff&color=7e22ce',
+        },
+        category: 'Musik',
+        location: 'Jakarta Selatan',
+        description: 'Pertunjukan musik fenomenal bertajuk World Tour dari Aldi Taher di Bengkel Space, Jakarta Selatan. Bersiaplah untuk menyanyi lagu-lagu hits ikonik dan menikmati malam penuh tawa dan hiburan segar!',
+        terms: [
+            'Tiket berkategori General Admission (Standing).',
+            'Hanya berlaku untuk pengunjung berusia 18 tahun ke atas.',
+            'Dilarang membawa rokok elektrik atau vape ke dalam area panggung utama.',
+            'Penukaran tiket gelang dibuka mulai pukul 17.00 WIB.'
+        ],
+        talents: [
+            {
+                name: 'Aldi Taher',
+                role: 'Lead Performer',
+                imageUrl: 'https://ui-avatars.com/api/?name=Aldi+T&background=f3e8ff&color=6b21a8'
+            }
+        ],
+        facilities: ['Food & Beverage Station', 'Medical Room', 'Loker Penyimpanan Barang', 'Smoking Area Khusus'],
+        bannerUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        time: '19:00 - 22:30 WIB',
+        googleMapsLink: 'https://maps.google.com/?q=Bengkel+Space+SCBD',
+        socials: [
+            { platform: 'instagram', username: 'alditaher.official', link: 'https://instagram.com/alditaher.official' }
         ]
     },
 ];
@@ -484,7 +640,82 @@ export const dummyNearbyEvents: EventTicket[] = [
         socials: [
             { platform: 'instagram', username: 'innovativeacademy', link: 'https://instagram.com/innovativeacademy' }
         ]
-    }
+    },
+    {
+        id: 'n7',
+        slug: 'aldi-taher-world-tour-2026',
+        title: 'ALDI TAHER - WORLD TOUR 2026 by BENGKEL HALL',
+        date: '05 September 2026',
+        price: 100000,
+        imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+        organizer: {
+            name: 'Bengkel Space',
+            logo: 'https://ui-avatars.com/api/?name=BS&background=f3e8ff&color=7e22ce',
+        },
+        category: 'Musik',
+        location: 'Jakarta Selatan',
+        description: 'Pertunjukan musik fenomenal bertajuk World Tour dari Aldi Taher di Bengkel Space, Jakarta Selatan. Bersiaplah untuk menyanyi lagu-lagu hits ikonik dan menikmati malam penuh tawa dan hiburan segar!',
+        terms: [
+            'Tiket berkategori General Admission (Standing).',
+            'Hanya berlaku untuk pengunjung berusia 18 tahun ke atas.',
+            'Dilarang membawa rokok elektrik atau vape ke dalam area panggung utama.',
+            'Penukaran tiket gelang dibuka mulai pukul 17.00 WIB.'
+        ],
+        talents: [
+            {
+                name: 'Aldi Taher',
+                role: 'Lead Performer',
+                imageUrl: 'https://ui-avatars.com/api/?name=Aldi+T&background=f3e8ff&color=6b21a8'
+            }
+        ],
+        facilities: ['Food & Beverage Station', 'Medical Room', 'Loker Penyimpanan Barang', 'Smoking Area Khusus'],
+        bannerUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        time: '19:00 - 22:30 WIB',
+        googleMapsLink: 'https://maps.google.com/?q=Bengkel+Space+SCBD',
+        socials: [
+            { platform: 'instagram', username: 'alditaher.official', link: 'https://instagram.com/alditaher.official' }
+        ]
+    },
+    {
+        id: 'n8',
+        slug: 'mommy-n-me-2026',
+        title: "Mommy n'Me 2026",
+        date: '28 Juni 2026',
+        price: 50000,
+        imageUrl: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+        organizer: {
+            name: 'Reed Panorama Exhibitions',
+            logo: 'https://ui-avatars.com/api/?name=RPE&background=fce7f3&color=db2777',
+        },
+        category: 'Pameran',
+        location: 'Jakarta Pusat',
+        description: 'Pameran festival kebutuhan ibu hamil, bayi, dan anak-anak terbesar di Indonesia. Temukan ribuan produk perlengkapan dengan diskon eksklusif dan ikuti talkshow edukatif bersama pakar kesehatan anak.',
+        terms: [
+            'Tiket masuk berlaku harian (1-Day Admission).',
+            'Anak-anak di bawah tinggi badan 100cm gratis tiket masuk.',
+            'Dilarang membawa kereta dorong (stroller) berukuran ekstra besar di jam-jam padat.',
+            'Harap menjaga kebersihan dan menggunakan tempat sampah daur ulang.'
+        ],
+        talents: [
+            {
+                name: 'dr. Meta Hanindita, Sp.A',
+                role: 'Pediatrician & Talkshow Host',
+                imageUrl: 'https://ui-avatars.com/api/?name=Meta+H&background=fce7f3&color=9d174d'
+            },
+            {
+                name: 'Tasya Kamila',
+                role: 'Mom Influencer Guest',
+                imageUrl: 'https://ui-avatars.com/api/?name=Tasya+K&background=ffedd5&color=c2410c'
+            }
+        ],
+        facilities: ['Nursery & Breastfeeding Room', 'Stroller Rental Station', 'Kids Playground Area', 'Bazaar Makanan & Minuman', 'Medical/P3K'],
+        bannerUrl: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        time: '10:00 - 21:00 WIB',
+        googleMapsLink: 'https://maps.google.com/?q=Jakarta+Pusat',
+        socials: [
+            { platform: 'instagram', username: 'mommynme.id', link: 'https://instagram.com/mommynme.id' }
+        ]
+    },
 ];
 
 export const dummyBanners: Banner[] = [

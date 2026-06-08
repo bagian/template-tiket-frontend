@@ -3,26 +3,26 @@ import { use, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { dummyEvents, dummyNearbyEvents } from '@/data/dummyEvents';
-import { 
-    CalendarDays, 
-    MapPin, 
-    ChevronLeft, 
-    Ticket, 
-    ShieldAlert, 
-    Users, 
-    Landmark, 
-    ChevronRight, 
+import {
+    CalendarDays,
+    MapPin,
+    ChevronLeft,
+    Ticket,
+    ShieldAlert,
+    Users,
+    Landmark,
+    ChevronRight,
     ExternalLink,
-    Utensils, 
-    Coffee, 
-    Car, 
-    Bus, 
-    Heart, 
-    Wifi, 
-    Lock, 
-    Camera, 
-    Star, 
-    Sparkles 
+    Utensils,
+    Coffee,
+    Car,
+    Bus,
+    Heart,
+    Wifi,
+    Lock,
+    Camera,
+    Star,
+    Sparkles
 } from 'lucide-react';
 
 const Instagram = (props: React.SVGProps<SVGSVGElement>) => (
@@ -144,7 +144,7 @@ export default function EventDetailPage({ params }: PageProps) {
             </div>
 
             {/* Mobile Event Details (Visible only on mobile/tablet) */}
-            <div className="lg:hidden w-full bg-white border-b border-gray-100 flex flex-col">
+            <div className="lg:hidden w-full  flex flex-col">
                 {/* Event Details Content */}
                 <div className="px-4 sm:px-6 py-6 flex flex-col gap-4">
                     {/* Category Tag */}
@@ -286,7 +286,7 @@ export default function EventDetailPage({ params }: PageProps) {
                         </div>
 
                         {/* Tab Contents Area */}
-                        <div className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200/60 shadow-xs min-h-[350px]">
+                        <div className="min-h-[350px]">
                             {/* 1. DESKRIPSI */}
                             {activeTab === 'deskripsi' && (
                                 <div className="space-y-4">
@@ -322,7 +322,7 @@ export default function EventDetailPage({ params }: PageProps) {
                                     {event.talents && event.talents.length > 0 ? (
                                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                                             {event.talents.map((t, index) => (
-                                                <div key={index} className="bg-gray-50/50 p-4 rounded-2xl border border-gray-100 flex flex-col items-center text-center shadow-xs">
+                                                <div key={index} className="p-4 rounded-2xl  flex flex-col items-center text-center">
                                                     <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-sm mb-3">
                                                         <Image
                                                             src={t.imageUrl}
@@ -348,17 +348,17 @@ export default function EventDetailPage({ params }: PageProps) {
                                     <h3 className="text-lg font-bold text-gray-900">Fasilitas Event</h3>
                                     {event.facilities && event.facilities.length > 0 ? (
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                             {event.facilities.map((fac, index) => {
-                                                 const FacilityIcon = getFacilityIcon(fac);
-                                                 return (
-                                                     <div key={index} className="flex items-center gap-3 bg-gray-50/50 p-3 rounded-xl border border-gray-100">
-                                                         <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-                                                             <FacilityIcon className="w-4 h-4" />
-                                                         </div>
-                                                         <span className="text-sm font-semibold text-gray-700">{fac}</span>
-                                                     </div>
-                                                 );
-                                             })}
+                                            {event.facilities.map((fac, index) => {
+                                                const FacilityIcon = getFacilityIcon(fac);
+                                                return (
+                                                    <div key={index} className="flex items-center gap-3 p-3">
+                                                        <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                                                            <FacilityIcon className="w-4 h-4" />
+                                                        </div>
+                                                        <span className="text-sm font-semibold text-gray-700">{fac}</span>
+                                                    </div>
+                                                );
+                                            })}
                                         </div>
                                     ) : (
                                         <p className="text-sm text-gray-600">Tidak ada fasilitas khusus yang tertera.</p>
@@ -370,9 +370,9 @@ export default function EventDetailPage({ params }: PageProps) {
 
                     {/* RIGHT COLUMN: Sticky Event Detail & Checkout Sidebar (Desktop only) */}
                     <div className="hidden lg:block lg:col-span-1">
-                        <div className="lg:sticky lg:top-40 bg-white rounded-3xl border border-gray-200/60 shadow-md p-5 flex flex-col gap-5">
+                        <div className="lg:sticky lg:top-40 rounded-xl shadow-md flex flex-col gap-5 overflow-hidden">
                             {/* Banner Image */}
-                            <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-gray-100 shadow-sm shrink-0">
+                            <div className="relative w-full aspect-video overflow-hidden bg-gray-100 shadow-sm shrink-0">
                                 <Image
                                     src={event.bannerUrl || event.imageUrl}
                                     alt={event.title}
@@ -383,7 +383,7 @@ export default function EventDetailPage({ params }: PageProps) {
                             </div>
 
                             {/* Organizer Info */}
-                            <div className="flex items-center gap-2.5">
+                            <div className="flex items-center gap-2.5 p-5">
                                 <div className="relative w-8 h-8 rounded-full overflow-hidden border border-gray-100 bg-gray-50 shrink-0">
                                     <Image
                                         src={event.organizer.logo}
@@ -399,7 +399,7 @@ export default function EventDetailPage({ params }: PageProps) {
                             </div>
 
                             {/* Event Title */}
-                            <div>
+                            <div className='px-5'>
                                 <span className="inline-block text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 mb-2">
                                     {event.category || 'General'}
                                 </span>
@@ -407,7 +407,7 @@ export default function EventDetailPage({ params }: PageProps) {
                             </div>
 
                             {/* Date & Location */}
-                            <div className="flex flex-col gap-3 py-2 border-y border-dashed border-gray-100">
+                            <div className="flex flex-col gap-3 py-2 px-5 border-y border-dashed border-gray-100">
                                 {/* Date */}
                                 <div className="flex items-center gap-3 text-sm">
                                     <CalendarDays className="w-5 h-5 text-blue-500 shrink-0" />
@@ -463,7 +463,7 @@ export default function EventDetailPage({ params }: PageProps) {
 
                             {/* Media Sosial */}
                             {event.socials && event.socials.length > 0 && (
-                                <div className="flex flex-col gap-2.5 py-1">
+                                <div className="flex flex-col gap-2.5 py-1 px-5">
                                     <span className="text-xs text-gray-400 font-semibold">Media Sosial</span>
                                     <div className="flex flex-wrap gap-2">
                                         {event.socials.map((soc, idx) => {
@@ -488,7 +488,7 @@ export default function EventDetailPage({ params }: PageProps) {
                             )}
 
                             {/* Ticket Price & Buy Button */}
-                            <div className="flex flex-col gap-4 mt-1">
+                            <div className="flex flex-col gap-4 mt-1 px-5 pb-5">
                                 <div className="flex flex-col">
                                     <span className="text-xs text-gray-400 font-semibold">Harga Tiket Mulai Dari</span>
                                     <span className="text-2xl font-black text-gray-900 mt-0.5">
@@ -506,7 +506,7 @@ export default function EventDetailPage({ params }: PageProps) {
             </div>
 
             {/* FLOATING BOTTOM BAR (Visible on Mobile/Tablet Only) - Positioned at bottom-0 with clear spacing */}
-            <div className="fixed bottom-0 inset-x-0 bg-white border-t border-gray-200/80 shadow-[0_-8px_30px_rgba(0,0,0,0.08)] pt-4 pb-7 px-6 flex items-center justify-between z-40 lg:hidden transition-all duration-300">
+            <div className="m-5 rounded-3xl fixed bottom-0 inset-x-0 bg-white border-t border-gray-200/80 shadow-[0_-8px_30px_rgba(0,0,0,0.08)] pt-5 pb-6 px-6 flex items-center justify-between z-40 lg:hidden transition-all duration-300">
                 <div className="flex flex-col">
                     <span className="text-[10px] text-gray-400 font-bold uppercase">Harga Mulai Dari</span>
                     <span className="text-lg font-black text-gray-900">

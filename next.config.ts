@@ -12,6 +12,14 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'ui-avatars.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'artatix.co.id',
+      },
+      {
+        protocol: 'https',
+        hostname: 's-light.tiket.photos',
+      },
     ],
   },
 };
