@@ -25,21 +25,29 @@ export default function EventList() {
                         prevEl: '.event-prev-btn',
                         nextEl: '.event-next-btn',
                     }}
-                    // 1. UBAH KE AUTO: Agar Swiper membaca ukuran dari w-[291px]
-                    slidesPerView={"auto"}
-                    spaceBetween={14}
+                    slidesPerView={1.2}
+                    spaceBetween={16}
                     breakpoints={{
                         640: {
-                            spaceBetween: 14,
+                            slidesPerView: 2,
+                            spaceBetween: 12,
+                        },
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 12,
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 12,
                         }
                     }}
-                    grabCursor={true} // Sebaiknya true agar user tahu ini bisa di-swipe
-                    loop={true} // 2. MATIKAN LOOP: Jika data dummy Anda sedikit
+                    grabCursor={true}
+                    loop={true}
                     simulateTouch={true}
                     className="pb-8 pt-2 !px-1"
                 >
                     {dummyEvents.map((event) => (
-                        <SwiperSlide key={event.id} className="!w-[291px] h-auto">
+                        <SwiperSlide key={event.id} className="h-auto">
                             <EventCard event={event} />
                         </SwiperSlide>
                     ))}

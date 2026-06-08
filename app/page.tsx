@@ -1,11 +1,15 @@
 import HeroSection from '@/components/home/HeroSection';
+import CategorySection from '@/components/home/CategorySection';
 import EventList from '@/components/home/EventList';
+import NearbyEvents from '@/components/home/NearbyEvents';
 
 export default function Home() {
   return (
     <div>
       <HeroSection />
+      <CategorySection />
       <EventList />
+      <NearbyEvents />
 
       {/* Section Laris Manis */}
       <section className="bg-gradient-to-br from-[#2b2b73] to-[#3a3ab8] py-16 relative overflow-hidden">

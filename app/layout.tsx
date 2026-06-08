@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="id">
       <body className="bg-gray-50 min-h-screen flex flex-col overflow-x-hidden">
         <Navbar />
-        <main className="flex-grow w-full overflow-x-hidden">
+        <main className="flex-grow w-full">
           {children}
         </main>
         <Footer />

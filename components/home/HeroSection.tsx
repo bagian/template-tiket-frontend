@@ -1,11 +1,13 @@
 'use client';
+import { useState } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { dummyBanners } from '@/data/dummyEvents';
 
 export default function HeroSection() {
+    const [activeIndex, setActiveIndex] = useState(0);
     // Duplicate banners to ensure loop mode has enough slides (6 slides total)
     // This resolves the Swiper Loop Warning and enables autoplay to function correctly on load.
     const displayBanners = [...dummyBanners, ...dummyBanners];
@@ -14,7 +16,7 @@ export default function HeroSection() {
         <div className="w-full pt-10 pb-2 bg-transparent relative group">
             <div className="w-full mx-auto relative">
                 <Swiper
-                    modules={[Autoplay, Pagination, Navigation]}
+                    modules={[Autoplay, Navigation]}
                     spaceBetween={12}
                     slidesPerView={1}
                     breakpoints={{
@@ -34,13 +36,12 @@ export default function HeroSection() {
                         disableOnInteraction: false,
                         pauseOnMouseEnter: true,
                     }}
-                    pagination={{
-                        clickable: false,
-                        el: '.hero-pagination',
-                    }}
                     navigation={{
                         prevEl: '.hero-prev-btn',
                         nextEl: '.hero-next-btn',
+                    }}
+                    onSlideChange={(swiper) => {
+                        setActiveIndex(swiper.realIndex % dummyBanners.length);
                     }}
                     className="pb-10 overflow-visible"
                 >
@@ -76,7 +77,16 @@ export default function HeroSection() {
                 </Swiper>
 
                 {/* Centered Pagination Wrapper */}
-                <div className="hero-pagination flex justify-center items-center gap-0 mt-2 z-20 select-none"></div>
+                <div className="hero-pagination flex justify-center items-center gap-0 mt-2 z-20 select-none">
+                    {dummyBanners.map((_, index) => (
+                        <span
+                            key={index}
+                            className={`swiper-pagination-bullet ${
+                                index === activeIndex ? 'swiper-pagination-bullet-active' : ''
+                            }`}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );

@@ -105,9 +105,8 @@ export default function Navbar() {
                 </div>
             </nav>
 
-            {/* Mobile Responsive Drawer Overlay (Full screen with smooth slide transition from the right) */}
             <div
-                className={`fixed inset-y-0 right-0 w-full h-full bg-white z-50 flex flex-col md:hidden transition-transform duration-300 ease-in-out transform ${isOpen ? 'translate-x-0 pointer-events-auto visible' : 'translate-x-full pointer-events-none invisible'}`}
+                className={`fixed inset-y-0 right-0 w-full h-full bg-white z-50 flex flex-col md:hidden transition-all duration-300 ease-in-out transform ${isOpen ? 'translate-x-0 opacity-100 pointer-events-auto' : 'translate-x-full opacity-0 pointer-events-none'}`}
             >
                 {/* Drawer Header (Navy Blue) */}
                 <div className="bg-[#152C8C] text-white h-16 px-6 flex justify-between items-center shrink-0 shadow-md">
@@ -118,7 +117,7 @@ export default function Navbar() {
                             <path d="M8 15c2.5-1 5.5-2 7.5-4" />
                             <path d="M12 11h3.5V14.5" />
                         </svg>
-                        <span className="text-xl font-black tracking-wider text-white">Artatix</span>
+                        <span className="text-xl font-black tracking-wider text-white">Artix</span>
                     </div>
 
                     {/* Close button (Polos, no circle background, matches screenshot 2) */}
@@ -222,7 +221,7 @@ export default function Navbar() {
             </div>
 
             {/* Floating Bottom Navigation Bar (Visible on Mobile Only, matches new screenshot) */}
-            <div className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-[400px] bg-[#213FC0] shadow-[0_8px_30px_rgba(0,0,0,0.25)] rounded-full px-2 py-2 flex items-center justify-between z-50 md:hidden border border-white/10">
+            <div className={`fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-[400px] bg-[#213FC0] shadow-[0_8px_30px_rgba(0,0,0,0.25)] rounded-full px-2 py-2 items-center justify-between md:hidden border border-white/10 transition-all duration-300 ease-in-out ${pathname?.startsWith('/event/') ? 'hidden pointer-events-none' : 'flex'} ${isOpen ? 'opacity-0 translate-y-20 pointer-events-none z-40' : 'opacity-100 translate-y-0 z-50'}`}>
                 {/* Home / Beranda Tab */}
                 {activeTab === 'home' ? (
                     <button
